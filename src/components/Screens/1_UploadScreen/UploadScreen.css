@@ -1,0 +1,58 @@
+.upload-screen {
+  position: relative;
+  text-align: center;
+  min-height: 100vh; /* Set min-height to take up the full viewport height */
+  padding-top: 100px;
+  padding-bottom: 60px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.picture-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.picture-item {
+  position: relative;
+  width: 100%;
+  padding-top: 133.33%;
+}
+
+.picture-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px; /* Adjust the value as needed for the desired roundness */
+  border: 2px solid #4D4D4D; /* Add gray border */
+  border-radius: 5px; /* Add rounded corners */
+  object-fit: cover;
+}
+
+.upload-button {
+  position: fixed; /* Position fixed to stay at the bottom even when scrolling */
+  bottom: 0px; /* Adjust as needed */
+  transform: translateX(-50%);
+  margin-bottom: 17px;
+  width: 30px;
+  height: 30px;
+  padding: 0px;
+  cursor: pointer;
+  z-index: 1000; /* Ensure it stays above other content */
+  background-color: transparent;
+  border: none;
+}
+
+/* Style for the white background at the bottom */
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* Adjust as needed */
+  background-color: #1E1E1E; /* Corrected hexadecimal color value */
+  z-index: 998; /* Ensure it stays below the upload button */
+}

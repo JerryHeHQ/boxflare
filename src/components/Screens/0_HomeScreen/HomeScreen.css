@@ -1,0 +1,85 @@
+/* HomeScreen.css */
+.homeScreen {
+  color: #fff; 
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  width: calc(100vw - 30px); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: calc(100vw - 90px); 
+  height: calc((100vw - 90px) / 2);
+  object-fit: cover;
+  margin-bottom: 30px;
+}
+
+.search-bar-label {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 5px;
+  align-self: flex-start;
+}
+
+.search-input {
+  flex-grow: 1;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: 2px solid #444;
+  background-color: #222;
+  color: #ddd;
+  outline: none;
+  border-radius: 10px 10px 10px 10px;
+  margin-right: 5px;
+}
+
+.get-code-button {
+  background-color: #BF8DFF;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-top: 15px;
+}
+
+.get-code-text {
+  color: #FFF;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.code-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.code-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+}
+
+.code-label {
+  color: #FFF;
+  font-size: 15px;
+  line-height: 100%;
+}
+
+.code {
+  color: #FFF;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 100%;
+  font-family: monospace;
+}

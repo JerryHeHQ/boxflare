@@ -1,0 +1,5 @@
+/* Style for the image */
+.image {
+  width: calc(100vw - 30px);
+  user-select: none;
+}

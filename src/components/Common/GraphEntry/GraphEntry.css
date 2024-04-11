@@ -1,0 +1,22 @@
+.graph-entry {
+    background-color: #000; 
+    color: #fff; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.row-label {
+    padding:5%;
+    margin:5%;
+}
+
+.posCount {
+    padding:5%;
+    margin:5%;
+}
+
+.negCount {
+    padding:5%;
+    margin:5%;
+}

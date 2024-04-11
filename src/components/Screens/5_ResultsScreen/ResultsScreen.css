@@ -1,0 +1,14 @@
+.resultsScreen {
+  height: 100vh;
+  margin-top: 100px;
+  overflow-y: 'auto';
+  overflow-x: 'hidden';
+}
+
+.resultsContent {
+  background-color: #000; 
+  color: #fff; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -1,0 +1,65 @@
+.progress-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #1E1E1E; /* White overlay with some transparency */
+  z-index: 999; /* Ensure it stays below the progress navigation */
+}
+
+.progress-navigation {
+  position: fixed;
+  top: 15px; /* Adjust this value as needed */
+  left: 50%;
+  width: calc(100vw - 60px);
+  background-color: transparent; /* Set background color to transparent */
+  z-index: 1000; /* Ensure it stays above other content */
+  display: flex;
+  align-items: center;
+  transform: translateX(-50%);
+}
+
+.step {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  border: 5px solid #393939;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.step.active {
+  background-color: #BF8DFF;
+  border-color: #BF8DFF;
+  color: black;
+}
+
+.line {
+  flex: 1;
+  height: 10px;
+  background-color: #393939;
+}
+
+.step-text {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  text-align: center;
+  width: 80px;
+  color: white;
+}
+
+.active-line {
+  background-color: #BF8DFF;
+}
+
+.button-container {
+  margin-top: 20px;
+}

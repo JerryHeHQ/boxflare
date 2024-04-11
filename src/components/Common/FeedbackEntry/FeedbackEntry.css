@@ -1,0 +1,16 @@
+.feedback-entry {
+  width: calc(100vw - 30px);
+  margin-top: 15px;
+}
+
+.feedback-label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.feedback-text {
+  font-size: 18px;
+  color: #fff;
+  line-height: 100%;
+}
