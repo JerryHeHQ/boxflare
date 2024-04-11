@@ -250,7 +250,7 @@ async function getCategories(senderToken, receiverToken) {
 // sentiment: true if feedback is positive and false if feedback is negative
 // category: the index of the category the feedback is related to as an integer
 // return: true on success and false on failure
-async function addFeedback(senderToken, receiverToken, imgIndex, x, y, name, element, description, effect, sentiment, category) {
+async function addFeedback(senderToken, receiverToken, imgIndex, x, y, endX, endY, name, element, description, effect, sentiment, category) {
   const sessionToken = `${senderToken}_${receiverToken}`;
   const sessionFeedbackRef = db.collection('feedback').doc(sessionToken);
 
@@ -261,6 +261,8 @@ async function addFeedback(senderToken, receiverToken, imgIndex, x, y, name, ele
     const dotData = {
       x: x,
       y: y,
+      endX: endX,
+      endY: endY,
       name: name,
       element: element,
       description: description,

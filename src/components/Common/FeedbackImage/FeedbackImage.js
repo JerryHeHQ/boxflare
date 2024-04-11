@@ -10,7 +10,8 @@ const FeedbackImage = ({
   isVisible, 
   clickPosX, 
   clickPosY, 
-  updateUserClickPosition }) => {
+  updateUserClickPosition,
+  updateUserEndPosition }) => {
   const imageRef = useRef(null);
   const [imageLoaded, setImageLoaded] = useState(false);
   const [selectedDots, setSelectedDots] = useState([]);
@@ -55,16 +56,15 @@ const FeedbackImage = ({
 
   const [isSelecting, setIsSelecting] = useState(false);
   const [mousePos, setMousePos] = useState({x: 0, y: 0});
+  const [selectionDims, setSelectionDims] = useState([0, 0]);
 
   const handleMouseMove = (event) => {
     if (isSelecting) {
       setMousePos({x: event.clientX, y: event.clientY});
 
-      console.log("handleMouseMove():", event.clientX, event.clientY);
+      // console.log("handleMouseMove():", event.clientX, event.clientY);
     }
   }
-
-  const [selectionDims, setSelectionDims] = useState([0, 0]);
 
   const handleClick = (event) => {
     if (isSender) {
@@ -87,6 +87,7 @@ const FeedbackImage = ({
       setIsSelecting(false)
       const dotPosition = calcDotPosition(clickPosX, clickPosY);
       setSelectionDims([event.clientX - dotPosition[0], event.clientY - dotPosition[1]]);
+      updateUserEndPosition(xPercent, yPercent);
     } else {
       setMousePos({x: event.clientX, y: event.clientY});
       setIsSelecting(true);
@@ -95,7 +96,7 @@ const FeedbackImage = ({
     }
 
     displayDotFeedback(null);
-    console.log("handleClick():", event.clientX, event.clientY)
+    // console.log("handleClick():", event.clientX, event.clientY)
   };
 
   const handleDotClick = (dotIndex) => {
@@ -110,9 +111,12 @@ const FeedbackImage = ({
 
   const calculateDotStyle = (dotIndex, isUserAdded) => {
     var dotPosition = calcDotPosition(clickPosX, clickPosY);
+    var endPosition;
+    
     if (!isUserAdded) {
       const currDot = feedback[`dot${dotIndex}`];
-      dotPosition = calcDotPosition(currDot['x'], currDot['y'])
+      dotPosition = calcDotPosition(currDot['x'], currDot['y']);
+      endPosition = calcDotPosition(currDot['endX'], currDot['endY']);
     }
     // console.log(dotPosition);
 
@@ -126,8 +130,8 @@ const FeedbackImage = ({
       borderColor = `rgba(${feedback[`dot${dotIndex}`]['sentiment'] ? '0,255,0' : '255,0,0'},${selectedDots.includes(dotIndex) ? '1' : '0.33'})`
     }
 
-    var width = '30px';
-    var height = '30px';
+    var width = '0px';
+    var height = '0px';
     if (isUserAdded) {
       if (isSelecting) {
         width = `${mousePos['x']-dotPosition[0]}px`
@@ -136,6 +140,9 @@ const FeedbackImage = ({
         width = `${selectionDims[0]}px`
         height = `${selectionDims[1]}px`
       }
+    } else {
+      width = `${endPosition[0]-dotPosition[0]}px`
+      height = `${endPosition[1]-dotPosition[1]}px`
     }
 
     return {
@@ -163,7 +170,7 @@ const FeedbackImage = ({
       null}
       {clickPosX != null && clickPosY != null
       ?
-      <div style={calculateDotStyle(null, true)}/>
+      <div style={calculateDotStyle(null, true)} onClick={() => {updateUserClickPosition(null, null);}}/>
       :
       null}
     </div>

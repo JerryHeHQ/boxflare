@@ -196,6 +196,8 @@ function App() {
   // Set on ViewScreen, used in FeedbackScreen
   const [clickPosX, setClickPosX] = useState();
   const [clickPosY, setClickPosY] = useState();
+  const [endPosX, setEndPosX] = useState();
+  const [endPosY, setEndPosY] = useState();
   const [categories, setCategories] = useState();
   // Set on FeedbackScreen, used in FeedbackScreen
   const [imageIndex, setImageIndex] = useState(0);
@@ -269,6 +271,8 @@ function App() {
     setIsSender();
     setClickPosX();
     setClickPosY();
+    setEndPosX();
+    setEndPosY();
     setCategories();
     setCritiquerName();
     setFormalElement();
@@ -290,6 +294,13 @@ function App() {
   const updateUserClickPosition = (xPercent, yPercent) => {
     setClickPosX(xPercent);
     setClickPosY(yPercent);
+  }
+
+  const updateUserEndPosition = (xPercent, yPercent) => {
+    setEndPosX(xPercent);
+    setEndPosY(yPercent);
+
+    console.log(clickPosX, clickPosY, xPercent, yPercent);
   }
   
   const senderSteps = ['Upload', 'Category', 'View', 'Results'];
@@ -332,7 +343,8 @@ function App() {
         fetchCategories={fetchCategories}
         clickPosX={clickPosX}
         clickPosY={clickPosY}
-        updateUserClickPosition={updateUserClickPosition}/>;
+        updateUserClickPosition={updateUserClickPosition}
+        updateUserEndPosition={updateUserEndPosition}/>;
       case 4:
         return <FeedbackScreen 
         navigateToScreen={navigateToScreen} 
@@ -342,6 +354,9 @@ function App() {
         clickPosX={clickPosX}
         clickPosY={clickPosY}
         updateUserClickPosition={updateUserClickPosition}
+        endPosX={endPosX}
+        endPosY={endPosY}
+        updateUserEndPosition={updateUserEndPosition}
         critiquerName={critiquerName}
         setCritiquerName={setCritiquerName} 
         formalElement={formalElement}

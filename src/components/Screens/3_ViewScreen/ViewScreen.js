@@ -22,7 +22,8 @@ function ViewScreen({
   fetchCategories, 
   clickPosX, 
   clickPosY, 
-  updateUserClickPosition }) {
+  updateUserClickPosition,
+  updateUserEndPosition }) {
 
   const onBackClick = () => {
     exitSession();
@@ -93,7 +94,8 @@ function ViewScreen({
         isVisible={isVisible}
         clickPosX={clickPosX}
         clickPosY={clickPosY}
-        updateUserClickPosition={updateUserClickPosition}/>
+        updateUserClickPosition={updateUserClickPosition}
+        updateUserEndPosition={updateUserEndPosition}/>
       : 
       null
       }

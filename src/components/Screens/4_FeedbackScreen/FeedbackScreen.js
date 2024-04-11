@@ -13,6 +13,9 @@ function FeedbackScreen({
   clickPosX,
   clickPosY,
   updateUserClickPosition,
+  endPosX,
+  endPosY,
+  updateUserEndPosition,
   critiquerName,
   setCritiquerName ,
   formalElement,
@@ -34,6 +37,7 @@ function FeedbackScreen({
 
   const onBackClick = () => {
     updateUserClickPosition(null, null);
+    updateUserEndPosition(null, null);
     navigateToScreen(3, 0);
   }
 
@@ -44,6 +48,8 @@ function FeedbackScreen({
       imageIndex, 
       clickPosX, 
       clickPosY, 
+      endPosX,
+      endPosY,
       critiquerName, 
       formalElement, 
       description, 
@@ -52,6 +58,7 @@ function FeedbackScreen({
       categoryIndex,
     )
     updateUserClickPosition(null, null);
+    updateUserEndPosition(null, null);
     navigateToScreen(3, 0);
   }
 
