@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/boxflare/static/css/main.d7830766.css",
+    "main.js": "/boxflare/static/js/main.3bc70107.js",
+    "static/js/453.4f69ff8a.chunk.js": "/boxflare/static/js/453.4f69ff8a.chunk.js",
+    "static/media/glyphicons-halflings-regular.svg": "/boxflare/static/media/glyphicons-halflings-regular.060b2710bdbbe3dfe48b.svg",
+    "static/media/picture.jpg": "/boxflare/static/media/picture.0f40e4193446f10d42b3.jpg",
+    "static/media/glyphicons-halflings-regular.ttf": "/boxflare/static/media/glyphicons-halflings-regular.4692b9ec53fd5972caa2.ttf",
+    "static/media/glyphicons-halflings-regular.woff": "/boxflare/static/media/glyphicons-halflings-regular.82b1212e45a2bc35dd73.woff",
+    "static/media/glyphicons-halflings-regular.eot": "/boxflare/static/media/glyphicons-halflings-regular.5be1347c682810f199c7.eot",
+    "static/media/glyphicons-halflings-regular.woff2": "/boxflare/static/media/glyphicons-halflings-regular.be810be3a3e14c682a25.woff2",
+    "static/media/index.cjs": "/boxflare/static/media/index.671993152dc0f6e0b17a.cjs",
+    "static/media/logo.svg": "/boxflare/static/media/logo.1d97054bb5250aad0679441c7571e451.svg",
+    "static/media/eye-slash-solid.svg": "/boxflare/static/media/eye-slash-solid.740082533c5907b9c5c0faf2ec3464a3.svg",
+    "static/media/send_button.svg": "/boxflare/static/media/send_button.8b3c69d83784806eefae542fd4355ad7.svg",
+    "static/media/eye-solid.svg": "/boxflare/static/media/eye-solid.3a402557f6584d6f902a4144f271718b.svg",
+    "static/media/circle-question-regular.svg": "/boxflare/static/media/circle-question-regular.db26384bc5120fceeb4d0788ec9eb0cf.svg",
+    "index.html": "/boxflare/index.html",
+    "static/media/plus-solid.svg": "/boxflare/static/media/plus-solid.880957462d6a36f6968381f6c98ac73f.svg",
+    "static/media/check-solid.svg": "/boxflare/static/media/check-solid.e8ffb9bc60d3448236b9e343b0762fe6.svg",
+    "static/media/chevron-right-solid.svg": "/boxflare/static/media/chevron-right-solid.9c84d8d26e295991f35dcb0fd16c15a1.svg",
+    "static/media/chevron-left-solid.svg": "/boxflare/static/media/chevron-left-solid.a49890812f855c467e14f487e2601d95.svg",
+    "main.d7830766.css.map": "/boxflare/static/css/main.d7830766.css.map",
+    "main.3bc70107.js.map": "/boxflare/static/js/main.3bc70107.js.map",
+    "453.4f69ff8a.chunk.js.map": "/boxflare/static/js/453.4f69ff8a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d7830766.css",
+    "static/js/main.3bc70107.js"
+  ]
+}
