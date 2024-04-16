@@ -101,7 +101,7 @@ function ViewScreen({
       }
 
       <div className='hint'>
-        {isSender ? 'Click on the boxes to view feedback.' : 'Click on the boxes to view feedback. Click & drag to add feedback.'}
+        {isSender ? 'Click boxes to view feedback.' : 'Click boxes to view feedback. Click image & drag to add feedback.'}
       </div>
       <div className="button-row">
         <div className="icons">
